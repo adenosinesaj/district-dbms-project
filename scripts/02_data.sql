@@ -1,0 +1,213 @@
+INSERT INTO Division (Division_ID, Name, Size_KM2, Population, EstablishedYear, Landtype)
+VALUES
+    (1, 'Dhaka', 20593.74, 36155845, 1829, 'Urban and Rural'),
+    (2, 'Chattogram', 33771.18, 29923486, 1829, 'Coastal and Urban'),
+    (3, 'Khulna', 22285.91, 15687759, 1960, 'Urban and Rural'),
+    (4, 'Rajshahi', 18174.4, 20389482, 1829, 'Agricultural and Urban'),
+    (5, 'Barishal', 13297.01, 8945092, 1993, 'Riverine and Rural'),
+    (6, 'Sylhet', 12595.85, 12116031, 1995, 'Hilly and Urban'),
+    (7, 'Rangpur', 16184.99, 17878078, 2010, 'Agricultural and Rural'),
+    (8, 'Mymensingh', 10585.19, 12252368, 2015, 'Agricultural and Urban');
+
+INSERT INTO District (District_Name, Division_ID, Area, Population, Education_Percentage, Postal_Code)
+VALUES
+    ('Gazipur', 1, 1741.53, 3406780, 72.50, '1700'),
+    ('Chattogram', 2, 5282.92, 7614253, 67.89, '4000'),
+    ('Khulna', 3, 4394.46, 2318250, 70.12, '9100'),
+    ('Rajshahi', 4, 2407.01, 2886591, 73.45, '6000'),
+    ('Barishal', 5, 2784.52, 2346527, 68.87, '8200'),
+    ('Sylhet', 6, 3490.40, 3433700, 75.33, '3100'),
+    ('Rangpur', 7, 2370.45, 2539150, 65.22, '5400'),
+    ('Mymensingh', 8, 4363.48, 5116654, 64.50, '2200'),
+    ('Noakhali', 2, 3685.87, 3107065, 62.30, '3800'),
+    ('Chandpur', 1, 1704.06, 2521823, 68.90, '3600'),
+    ('Dinajpur', 7, 3437.98, 2998622, 67.50, '5200'),
+    ('Jessore', 3, 2606.94, 2766754, 68.90, '7400'),
+    ('Gopalganj', 1, 1453.34, 1700000, 64.50, '8100'),
+    ('Gaibandha', 7, 2395.74, 2400000, 62.30, '5700'),
+    ('Chapainawabganj', 4, 1396.56, 1300000, 70.10, '6300'),
+    ('Tangail', 1, 3444.93, 3800000, 75.80, '1900'),
+    ('Rangamati', 8, 6116.00, 500000, 35.9, '4500'),
+    ('Khagrachari', 8, 2699.55, 400000, 29.5, '4400'),
+    ('Bandarban', 8, 4479.00, 350000, 29.5, '4600'),
+    ('Mongla', 3, 141.56, 150000, 75.50, '9400'),
+    ('Cox’s Bazar', 2, 2491.86, 300000, 70.00, '4700'),
+    ('Dhaka', 1, 1463.60, 8906039, 88.00, '1000'),
+    ('Cumilla', 1, 3087.02, 4631023, 84.30, '3500'),
+    ('Netrokona', 6, 2471.57, 1114565, 81.50, '2400'),
+    ('Satkhira', 3, 3850.34, 3050000, 73.20, '9400'),
+    ('Patuakhali', 3, 3570.60, 1650000, 75.50, '8600'),
+    ('Jamalpur', 8, 3394.76, 2280000, 67.10, '2000'),
+    ('Bagura', 4, 3983.41, 3700000, 72.30, '5800'),
+    ('Sirajganj', 4, 2498.61, 1700000, 68.00, '6700'),
+    ('Naogaon', 4, 3435.67, 2600000, 72.80, '6500'),
+    ('Bagerhat', 3, 3923.99, 1600000, 75.50, '9300'),
+    ('Brahmanbaria', 6, 2195.74, 2400000, 70.30, '3400'),
+    ('Kurigram', 4, 2394.80, 1700000, 68.00, '5600'),
+    ('Sunamganj', 6, 3075.36, 1500000, 60.20, '3000'),
+    ('Narshingdi', 1, 1232.88, 2950000, 81.10, '1600');
+
+INSERT INTO Transport_Type (Transport_Type_ID, Transport_Type_Name)
+VALUES
+    (1, 'Bus'),
+    (2, 'Train'),
+    (3, 'Boat'),
+    (4, 'Airplane');
+
+INSERT INTO Transport_Route (Route_ID, Start_Point, End_Point, Distance, Transport_Type_ID, Fare)
+VALUES
+    (1, 'Dhaka', 'Chattogram', 245.00, 1, 400), 
+    (2, 'Dhaka', 'Khulna', 335.00, 1, 550),      
+    (3, 'Sylhet', 'Rajshahi', 400.00, 1, 600),    
+    (4, 'Barishal', 'Rangpur', 280.00, 1, 450),  
+    (5, 'Dhaka', 'Chattogram', 245.00, 2, 300),  
+    (6, 'Dhaka', 'Khulna', 335.00, 2, 350),
+    (7, 'Rajshahi', 'Sylhet', 400.00, 2, 400),
+    (8, 'Barishal', 'Khulna', 90.00, 3, 150),    
+    (9, 'Chattogram', 'Cox’s Bazar', 110.00, 3, 120),  
+    (10, 'Dhaka', 'Mongla', 185.00, 3, 250),     
+    (11, 'Dhaka', 'Sylhet', 150.00, 4, 2500),   
+    (12, 'Dhaka', 'Chattogram', 245.00, 4, 3500), 
+    (13, 'Dhaka', 'Khulna', 335.00, 4, 4500);   
+
+INSERT INTO Education_Type (Education_Type_ID, Type_Name, Total_count, District_Name) VALUES
+    (1, 'Primary Education', 500, 'Dhaka'), 
+    (2, 'Secondary Education', 1500, 'Chattogram'),
+    (3, 'Higher Education', 200, 'Sylhet'),
+    (4, 'Vocational Training', 300, 'Rajshahi'),
+    (5, 'Technical Education', 100, 'Khulna'),
+    (6, 'Religious Education', 250, 'Barishal'),
+    (7, 'Medical Education', 50, 'Mongla'); 
+
+
+INSERT INTO District_Famous_Person (Person_ID, FULL_NAME, PROFESSION, NOTABLE_WORK, DISTRICT_NAME) 
+  VALUES
+    (1, 'Muhammad Yunus', 'Economist', 'Grameen Bank, Nobel Prize', 'Chattogram'),
+    (2, 'Mohammad Abdul Momen', 'civil servant', 'Co-Founder And Director Of Pride Group', 'Cox’s Bazar'),
+    (3, 'Bir Bikram U. K. Ching', 'Freedom Fighter', 'first Adibashi Freedom fighter', 'Bandarban'),
+    (4, 'Priti Kumar Mitra', 'Historian', 'History of Tribes', 'Khagrachari'),
+    (5, 'Basanti Chakma', 'Activist', 'Tribal Rights', 'Rangamati'),
+    (6, 'Shaikh Siraj', 'Agriculturist & Journalist', 'Hridoye Mati O Manush', 'Chandpur'),
+    (7, 'Obaidul Quader', 'Politician', 'General Secretary of Awami League', 'Noakhali'),
+    (8, 'Nawab Faizunnesa Choudhurani', 'only female Nawab in South Asia', 'pioneer of women''s education', 'Cumilla'),
+    (9, 'Sheikh Hasina', 'Former President', 'Padma Setu', 'Gopalganj'),
+    (10, 'Sufi Mohammad Sharif', 'Philosopher', 'Spiritual Works', 'Gazipur'),
+    (11, 'Hason Raja', 'Poet & Philosopher', 'Works in Bengali Mysticism', 'Sylhet'),
+    (12, 'Nural Hoda Choudhury', 'politician', 'member of the National Assembly of Pakistan following the 1965 elections under the Basic Democracy system', 'Dinajpur'),
+    (13, 'Mongol Chokroborty', 'Historian', 'Khulna History', 'Khulna'),
+    (14, 'Tamim Iqbal', 'Cricketer', 'Bangladesh National Team Player', 'Chattogram'),
+    (15, 'Mohammad Kaykobad', 'Bangladeshi Computer Scientist', 'Started Bangladesh Mathematics Olympiad', 'Chattogram'),
+    (16, 'Salman Shah', 'Actor', 'Notable Films: Keyamat Theke Keyamat', 'Sylhet'),
+    (17, 'Humayun Ahmed', 'Author & Filmmaker and novelist', 'Notable Novels: Himu, Misir Ali', 'Netrokona'),
+    (18, 'Mirza Fakhrul Islam Alamgir', 'Politician', 'Secretary General of BNP', 'Noakhali'),
+    (19, 'Runa Laila', 'Singer', 'Renowned Playback Singer', 'Khulna'),
+    (20, 'Dipu Moni', 'Politician', 'Minister of Education', 'Chandpur'),
+    (21, 'Khaleda Zia', 'Politician', 'Former Prime Minister of Bangladesh', 'Rangpur'),
+    (22, 'A.K. Fazlul Huq', 'Politician', 'The Sher-e-Bangla, Bengal Renaissance', 'Barishal'),
+    (23, 'Zahir Raihan', 'Filmmaker & Writer', 'Notable Film: Stop Genocide', 'Sylhet'),
+    (24, 'Nusrat Jahan', 'Actress', 'Notable Films: Nisshartho Bhalobasha', 'Sylhet'),
+    (25, 'Abdul Hamid', 'Politician', 'Current President of Bangladesh', 'Gopalganj'),
+    (26, 'Mashiur Rahman', 'Economist', 'Chief Economic Advisor of Bangladesh', 'Gopalganj'),
+    (27, 'Ishrat Sharmin', 'Artist', 'Notable Art Exhibitions: Khulna Modern Art', 'Khulna'),
+    (28, 'Kazi Nazrul Islam', 'Poet', 'Notable Works: Song of the Soil', 'Khulna'),
+    (29, 'Asaduzzaman Noor', 'Politician & Actor', 'Notable Films: Padma Nadir Majhi', 'Gazipur');
+
+INSERT INTO Famous_Food (Food_ID, Type, Food_Name, Popularity_Score, Description, Food_Price_Range, District_Name) VALUES
+    (1, 'Fish Dish', 'Ilish Mach (Hilsha Fish)', 10, 'Renowned for its rich taste and cultural significance in Bengali cuisine.', '500-1500 BDT per kg', 'Chandpur'),
+    (2, 'Snack', 'Chittagong Mezban Beef', 9, 'Spicy beef dish served at traditional Mezban feasts.', '150-250 BDT per plate', 'Chattogram'),
+    (3, 'Seafood', 'Rupchanda Fry', 8, 'Popular fried fish dish found near the beachside restaurants.', '200-400 BDT per plate', 'Cox’s Bazar'),
+    (4, 'Tribal Dish', 'Bamboo Shoot Curry', 7, 'Delicious curry made with fresh bamboo shoots, a tribal specialty.', '100-200 BDT per plate', 'Bandarban'),
+    (5, 'Dessert', 'Pahari Payesh', 8, 'Traditional rice pudding with a hint of tribal flavors.', '50-100 BDT per serving', 'Rangamati'),
+    (6, 'Tribal Dish', 'Panta Bhat with Fried Dry Fish', 9, 'Fermented rice served with fried fish, a local delicacy.', '80-150 BDT per plate', 'Khagrachari'),
+    (7, 'Sweet', 'Roshmalai', 10, 'Creamy dessert made from chhena and sweetened milk.', '20-50 BDT per piece', 'Cumilla'),
+    (8, 'Dessert', 'Kacha Golla', 9, 'Soft, sweet balls made of milk solids.', '100-200 BDT per box', 'Cumilla'),
+    (9, 'Fish Dish', 'Barishal Ilish Bhorta', 9, 'Hilsha fish cooked with mustard paste and spices, typical of Barishal.', '500-1200 BDT per kg', 'Barishal'),
+    (10, 'Meat Dish', 'Gopalganj Mutton Bhuna', 8, 'A flavorful mutton curry with spices, popular in Gopalganj.', '300-500 BDT per plate', 'Gopalganj'),
+    (11, 'Seafood', 'Sylheti Prawn Curry', 8, 'A spicy prawn curry made with Sylheti spices and mustard oil.', '250-400 BDT per plate', 'Sylhet'),
+    (12, 'Snack', 'Tangail Chingri Bhorta', 7, 'Mashed shrimp cooked with mustard and spices, a popular Tangail dish.', '100-150 BDT per plate', 'Tangail'),
+    (13, 'Rice Dish', 'Dinajpur Bhuna Khichuri', 8, 'A flavorful rice and lentil dish cooked with spices, a Dinajpur specialty.', '100-200 BDT per serving', 'Dinajpur');
+
+INSERT INTO LocalLanguages (District_Name, Normal_Language, Local_Language, Understandability_Rate)
+VALUES
+    ('Dhaka', 'আমি দৌড়াচ্ছি!', 'আমি লৌর পারতাছি!', 99.99),
+    ('Khulna','পড়তে বস বাবু ','পত্তি বয় বালে ', 75.00),
+    ('Sylhet', 'এইদিকে আসো!', 'ওবাইদি আয়! ', 80.00),
+    ('Chattogram', 'আমার ভালো লাগছে না', 'আত্তে গম ন লার', 75.50),
+    ('Narshingdi', 'তুই এখান থেকে যা!','গেলি তুই খানে খানে!', 85.00),
+    ('Noakhali', 'আমি কি করলাম আবার ?', 'আঁই কিচ্ছি আবার? ', 60.00),  
+    ('Barishal', 'ঝাড়ু দিয়ে মেরে এরপর নারকেল এর ছোলা দিয়ে ঢাকা দিয়ে রাখবে', 'পিছাইদ্দা পিঠাইয়া আইছাইদ্দা ঢাইক্কা থুমু', 88.50),
+    ('Rajshahi', 'চিৎকার করছিস কেন ? ', 'চিল্যাছিস ক্যান বে?  ', 90.00),
+    ('Mymensingh', 'অনেকক্ষণ ধরে তোমার জন্য দাঁড়িয়ে আছি', 'কুম্বালাত্তে তুমার লাইজ্ঞা খারুয়া রইছি ', 87.00),
+    ('Chandpur', 'সে কি করছে আমাকে বল?','হেতে কিয়ারসে আমারে কো', 85.00),
+    ('Sirajganj', 'আমাদের বাড়িতে আজকে টাকি মাছের ভর্তা দিয়ে ভাত রান্না হয়েছে।','আংগো বাড়ি আইজকা ছাইতান মাচের ভত্তা দিয়া ভাত আন্দিছে।', 88.00),
+    ('Rangpur','আপনারা কেমন আছেন ?','কেমন আছেন বাহে তোমরাগুলা ?',80.00),
+    ('Bagura', 'কোথায় গেছিলি?',' কে রে কুটি গেছিলু? ',75.00), 
+    ('Jamalpur','কিসের মত যে দেখা যায় বলতে পারছি না','কিসেন্নাহান যে দেহা যায় কয়ারপায়নে । ',65.00),
+    ('Patuakhali','এই মহিলা বেলা পার হয়ে এখন আসছো কাজ করতে', ' এ মাতারি বেন্না কাল পার হইয়া অহন আইছো কাম হরতে',  80.00),
+    ('Satkhira', 'তোকে মারবো কিন্তু ', ' তোরে মারবান বল ',  90.00),
+    ('Tangail', ' যা মন চাই তা করবো, আপনার তাতে কি? ', 'জ্যেবা মনে হ্যেবা করমু, তাতে আন্নের কি?', 75.00),
+    ('Naogaon', 'তুমি এমন করে কাঁদছ কেন?', ' তুমি ইংকারা করে কাদিচ্ছন ক্যান? ', 70.00),
+    ('Netrokona','খাবার খাইছেন? নাকি খাবেন?', 'খানা খাইছইন না খাইবাইন', 85.00),
+    ('Dinajpur','আমি কি হলাম','মুই কি হনু রে ', 60.00);
+
+INSERT INTO District_Health_Facilities (Facility_ID, Facility_Name, Address, Contact, Patient_Capacity, District_Name) VALUES
+    (1, 'Chandpur Sadar Hospital', 'Chandpur Sadar, Chandpur', '0841-123456', 250, 'Chandpur'),
+    (2, 'Chittagong Medical College Hospital', 'Chawk Bazar, Chittagong', '031-123456', 1500, 'Chattogram'),
+    (3, 'Cox\'s Bazar District Hospital', 'Cox\'s Bazar Sadar, Cox\'s Bazar', '0341-654321', 300, 'Cox’s Bazar'),
+    (4, 'Bandarban District Hospital', 'Bandarban Sadar, Bandarban', '0361-987654', 150, 'Bandarban'),
+    (5, 'Rangamati General Hospital', 'Rangamati Sadar, Rangamati', '0351-112233', 200, 'Rangamati'),
+    (6, 'Khagrachari District Hospital', 'Khagrachari Sadar, Khagrachari', '0371-445566', 180, 'Khagrachari'),
+    (7, 'Noakhali General Hospital', 'Noakhali Sadar, Noakhali', '0321-778899', 400, 'Noakhali'),
+    (8, 'Cumilla Medical College Hospital', 'Cumilla Cantonment, Cumilla', '081-334455', 1200, 'Cumilla'),
+    (9, 'Sylhet Medical College Hospital', 'Sylhet Sadar, Sylhet', '0821-112233', 1000, 'Sylhet'),
+    (10, 'Gopalganj District Hospital', 'Gopalganj Sadar, Gopalganj', '0191-223344', 250, 'Gopalganj'),
+    (11, 'Tangail General Hospital', 'Tangail Sadar, Tangail', '0921-556677', 200, 'Tangail'),
+    (12, 'Barishal Medical College Hospital', 'Barishal Sadar, Barishal', '0431-778899', 1200, 'Barishal');
+
+INSERT INTO Cultural_Event (Event_ID, Event_Name, Event_Date, Description, Event_Type, Location, District_Name) VALUES
+    (1, 'Bijoy Mela', '2024-12-16', 'A celebration of Victory Day with cultural performances and fairs.', 'Cultural Fair', 'Chandpur City Center', 'Chandpur'), 
+    (2, 'Boishakhi Mela', '2024-04-14', 'Traditional Bengali New Year fair with food, music, and crafts.', 'Cultural Fair', 'Chittagong Shilpakala Academy', 'Chattogram'),  
+    (3, 'Beach Carnival', '2024-11-20', 'A vibrant festival featuring music, sports, and food on the beach.', 'Festival', 'Cox\'s Bazar Beach', 'Cox’s Bazar'),  
+    (4, 'Marma Cultural Festival', '2024-02-10', 'A festival showcasing Marma culture and traditions.', 'Tribal Festival', 'Bandarban Town Hall', 'Bandarban'),  
+    (5, 'Chakma Buddha Purnima', '2024-05-25', 'A significant religious and cultural event for the Chakma community.', 'Religious Festival', 'Rangamati Monastery', 'Rangamati'),  
+    (6, 'Khagrachari Handicraft Fair', '2024-09-15', 'An exhibition and sale of traditional tribal handicrafts.', 'Art and Craft Fair', 'Khagrachari Stadium', 'Khagrachari'),
+    (7, 'Noakhali Jari Gaan Festival', '2024-08-10', 'A musical event featuring traditional Jari songs.', 'Music Festival', 'Noakhali Town Square', 'Noakhali'),
+    (8, 'Cumilla Pitha Utsab', '2024-12-20', 'A winter festival celebrating traditional Bengali cakes (pitha).', 'Food Festival', 'Cumilla Zilla School Grounds', 'Cumilla'),  
+    (9, 'Barishal River Festival', '2024-01-05', 'Celebration of Barishal’s river culture with boat races and folk performances.', 'Cultural Festival', 'Barishal Riverbank', 'Barishal'),  
+    (10, 'Sylhet Cultural Festival', '2024-10-10', 'A festival showcasing Sylheti culture through traditional dance, music, and cuisine.', 'Cultural Festival', 'Sylhet Town Hall', 'Sylhet'),  
+    (11, 'Gopalganj Folk Music Festival', '2024-06-12', 'Celebrating traditional Bengali folk music, including Baul and Bhatiali songs.', 'Music Festival', 'Gopalganj Sadar', 'Gopalganj'),
+    (12, 'Khulna Boat Race Festival', '2024-08-15', 'A traditional boat race on the rivers of Khulna, showcasing local fishing and boat-making skills.', 'Cultural Festival', 'Khulna Riverbank', 'Khulna'),  
+    (13, 'Gazipur Textile Expo', '2024-09-20', 'An event focusing on the textile and garment industry of Gazipur with local crafts and fashion shows.', 'Industry Expo', 'Gazipur City Center', 'Gazipur'); 
+
+INSERT INTO FamousPlaces(Place_Name, Description, Visitor_Per_Year, Entry_Fee, Opening_Time, District_Name)
+  VALUES
+    ('Bahadur Shah Park', 'Historical park with cultural importance', 50000, 0.00, '09:00:00', 'Dhaka'),
+    ('Karamjal of the Sundarbans', 'Wildlife sanctuary and eco-tourism spot in the Sundarbans', 80000, 20.00, '07:00:00', 'Khulna'),
+    ('Sixty Dome Mosque', 'Historic mosque from the Sultanate period and UNESCO World Heritage Site', 50000, 20.00, '08:00:00', 'Bagerhat'),
+    ('Patenga Beach', 'Popular sea beach and tourist spot', 300000, 0.00, '06:00:00', 'Chattogram'),
+    ('Bhatiari Lake', 'Scenic lake and picnic spot near Chittagong', 100000, 0.00, '07:00:00', 'Chattogram'),
+    ('Nilachal', 'Picturesque viewpoint in the Bandarban hill tracts', 150000, 20.00, '07:00:00', 'Bandarban'),
+    ('Mehera Zamindar’s House', 'Historical zamindar mansion with beautiful architecture', 30000, 0.00, '09:00:00', 'Tangail'),
+    ('Paharpur Buddhist Monastery', 'UNESCO World Heritage Site and ancient archaeological site', 100000, 30.00, '09:00:00', 'Naogaon'),
+    ('Shashi Lodge', 'Historical lodge of the zamindars of Mymensingh', 20000, 0.00, '09:00:00', 'Mymensingh'),
+    ('Kuakata Beach', 'Famous for stunning sunrises and sunsets', 400000, 0.00, '05:00:00', 'Patuakhali'),
+    ('Kalsakathi Zamindar Bari', 'Historical residence of the Kalsakathi zamindars', 15000, 0.00, '09:00:00', 'Barishal'),
+    ('Dove River', 'Scenic river with boating opportunities', 10000, 0.00, '06:00:00', 'Satkhira'),
+    ('Kaptai Lake', 'Largest man-made lake in Bangladesh', 150000, 0.00, '06:00:00', 'Rangamati'),
+    ('Mainamati War Cemetery', 'Commonwealth War Graves from WWII', 30000, 0.00, '09:00:00', 'Cumilla'),
+    ('Wari Bateshwar', 'Ancient archaeological site in Bangladesh', 20000, 0.00, '08:00:00', 'Narshingdi'),
+    ('St. Martin’s Island', 'Picturesque coral island', 200000, 0.00, '06:00:00', 'Cox’s Bazar'),
+    ('Himchhari', 'Waterfall and hilly area near Cox’s Bazar', 100000, 0.00, '07:00:00', 'Cox’s Bazar'),
+    ('Fort Stone Martyr’s Cemetery', 'Cemetery honoring martyrs', 10000, 0.00, '08:00:00', 'Brahmanbaria'),
+    ('Nijhum Island', 'Island famous for natural beauty and wildlife', 50000, 20.00, '06:00:00', 'Noakhali'),
+    ('Estuary of Three Rivers', 'Confluence of Meghna, Padma, and Dakatia rivers', 100000, 0.00, '06:00:00', 'Chandpur'),
+    ('Jaflong', 'Scenic beauty of hills and rivers', 200000, 0.00, '06:00:00', 'Sylhet'),
+    ('Shaheed Kamaruzzaman Central Park and Zoo', 'Park and zoo named after a martyr', 50000, 0.00, '09:00:00', 'Rajshahi'),
+    ('Risang Jharna', 'A breathtaking waterfall surrounded by lush greenery', 50000, 0.00, '08:00:00', 'Khagrachari'),
+    ('Holy Shrine of Hazrat Shah Kamal (RA)', 'A sacred shrine of Hazrat Shah Kamal (RA), attracting many devotees', 30000, 0.00, '08:00:00', 'Jamalpur'),
+    ('Mogulbasa Vatlar Switchgate', 'A scenic location with views of the Dharla River', 10000, 0.00, '06:00:00', 'Kurigram'),
+    ('A Different World', 'A scenic retreat offering tranquility and beauty', 30000, 0.00, '08:00:00', 'Rangpur'),
+    ('Mahasthangarh', 'One of the earliest urban archaeological sites in Bangladesh', 100000, 30.00, '08:00:00', 'Bagura'),
+    ('Balasoghat', 'A riverside area popular for its views and relaxing environment', 10000, 0.00, '06:00:00', 'Gaibandha'),
+    ('Tanguar Haor', 'A vast wetland ecosystem known for its biodiversity and scenic beauty', 50000, 0.00, '06:00:00', 'Sunamganj');
+
